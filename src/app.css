@@ -1,0 +1,190 @@
+:root {
+  --font-mono: 'Fira Mono', monospace;
+  --pure-white: #ffffff;
+  --primary-color: #b9c6d2;
+  --secondary-color: #d0dde9;
+  --tertiary-color: #edf0f8;
+  --accent-color: #ff3e00;
+  --heading-color: rgba(0, 0, 0, 0.7);
+  --text-color: #444444;
+  --background-without-opacity: rgba(255, 255, 255, 0.7);
+  --column-width: 42rem;
+  --column-margin-top: 4rem;
+  --app-body-color: #424656;
+  --app-body-bg: #FFFFFF;
+  --app-bar-color: #E0E0E0;
+  --app-bar-bg: #2172D2;
+  --app-bar-border: 1px solid #dddddd;
+  --app-bar-item-h: 56px;
+  --app-bar-item-w: 48px;
+  --column-width: 680px;
+  --column-margin-top: 1rem;
+  --column-padding: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Page                                    */
+/* -------------------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--app-body-color);
+}
+
+#svelte {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#svelte > header {
+  width: 100%;
+  max-width: 100%;
+  min-height: var(--app-bar-item-h);
+}
+#svelte > main {
+  flex: 1 1 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+
+.Loader {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.Loader > div {
+  text-align: center;
+  padding: 1rem;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply text-5xl mt-2 mb-6 leading-tight font-heading;
+}
+
+h1 {
+  @apply text-6xl;
+}
+
+h2 {
+  @apply text-5xl;
+}
+
+h3 {
+  @apply text-4xl;
+}
+
+h4 {
+  @apply text-3xl;
+}
+
+p {
+  @apply text-xl mb-2 text-gray-500 leading-relaxed;
+}
+
+.lead {
+  @apply text-2xl;
+}
+
+
+/* Pre and Code */
+pre {
+  background-color: #f1f1f1;
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: #f1f1f1;
+  white-space: pre-wrap;
+}
+
+pre>code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre;
+}
+
+/* Tables */
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0.5em;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+button:focus,
+input:focus,
+li:focus,
+div:focus,
+textarea:focus {
+  outline: none;
+}
+
+.page-wrapper {
+  @apply flex flex-col h-full w-full overflow-x-hidden overscroll-y-auto;
+}
+.page-container {
+  @apply min-h-full max-w-3xl min-h-full mx-auto px-4 py-4 w-full;
+} 
+.page-container-border {
+  @apply bg-white border-dashed border-gray-400 border-l-2 border-r-2;
+} 
+
+
+.content {
+  width: 100%;
+  max-width: var(--column-width);
+  margin: var(--column-margin-top) auto 0 auto;
+  padding: var(--column-padding);
+}
