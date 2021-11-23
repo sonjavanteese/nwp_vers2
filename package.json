@@ -28,5 +28,17 @@
     "@lukeed/uuid": "^2.0.0",
     "@supabase/supabase-js": "^1.25.2",
     "cookie": "^0.4.1"
-  }
+  },
+  "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);",
+  "main": "svelte.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonjavanteese/nwp_vers2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonjavanteese/nwp_vers2/issues"
+  },
+  "homepage": "https://github.com/sonjavanteese/nwp_vers2#readme"
 }
