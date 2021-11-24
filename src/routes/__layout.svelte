@@ -1,43 +1,45 @@
  <script>
     import '../app.css'
+    import {iconlib} from '$lib/header/icons'
+    import {fade} from 'svelte/transition';
     import Header from '$lib/header/Header.svelte';
+    import { page } from '$app/stores';
  </script>
- 
-<!--  <nav>
-  <a href=".">Home</a>
-  <a href="about">About</a>
-  <a href="settings">Settings</a>
-</nav> -->
+<div class="w-0 h-0">
+{@html iconlib}
+</div> 
 <Header />
-<main>
-<slot />
-</main>
+{#key $page.path}
+  <main out:fade={{duration: 200}} in:fade={{duration: 400, delay: 220}}>
+  <slot />
+  </main>  
+{/key}
 
+<footer class="px-4 py-2 text-center">{$page.path === '/' ? `/start` : $page.path}</footer>
 <style windi:preflights:global windi:safelist:global global>
     :root {
-  --font-mono: 'Fira Mono', monospace;
-  --pure-white: #ffffff;
-  --primary-color: #b9c6d2;
-  --secondary-color: #d0dde9;
-  --tertiary-color: #edf0f8;
-  --accent-color: #ff3e00;
-  --heading-color: rgba(0, 0, 0, 0.7);
-  --text-color: #444444;
-  --background-without-opacity: rgba(255, 255, 255, 0.7);
-  --column-width: 42rem;
-  --column-margin-top: 4rem;
-  --app-body-color: #424656;
-  --app-body-bg: #FFFFFF;
-  --app-bar-color: #E0E0E0;
-  --app-bar-bg: #2172D2;
-  --app-bar-border: 1px solid #dddddd;
-  --app-bar-item-h: 56px;
-  --app-bar-item-w: 48px;
-  --column-width: 680px;
-  --column-margin-top: 1rem;
-  --column-padding: 1rem;
-}
-
+      --font-mono: 'Fira Mono', monospace;
+      --pure-white: #ffffff;
+      --primary-color: #b9c6d2;
+      --secondary-color: #d0dde9;
+      --tertiary-color: #edf0f8;
+      --accent-color: #ff3e00;
+      --heading-color: rgba(0, 0, 0, 0.7);
+      --text-color: #444444;
+      --background-without-opacity: rgba(255, 255, 255, 0.7);
+      --column-width: 42rem;
+      --column-margin-top: 4rem;
+      --app-body-color: #424656;
+      --app-body-bg: #FFFFFF;
+      --app-bar-color: #E0E0E0;
+      --app-bar-bg: #2172D2;
+      --app-bar-border: 1px solid #dddddd;
+      --app-bar-item-h: 56px;
+      --app-bar-item-w: 48px;
+      --column-width: 680px;
+      --column-margin-top: 1rem;
+      --column-padding: 1rem;
+    }
 
 h1,
 h2,
@@ -90,6 +92,6 @@ p {
 }
 
 .page-container {
-    @apply w-full h-full max-w-lg mx-auto px-4;
+    @apply w-full max-w-lg mx-auto px-4 py-4;
 }
 </style>

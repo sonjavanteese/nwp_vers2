@@ -4,7 +4,7 @@
 	import logoDark from './svelte-logo-dark.svg';
 </script>
 
-<header>
+<header class="shadow-xl">
 	<div class="corner">
 		<a href="/">
 			<img src={logo} alt="SvelteKit" />

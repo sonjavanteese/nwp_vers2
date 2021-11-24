@@ -51,7 +51,8 @@ body {
 #svelte > main {
   flex: 1 1 auto;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 
