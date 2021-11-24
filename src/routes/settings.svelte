@@ -1,5 +1,5 @@
 <script>
-    export let name = "About"
+    export let name = "Settings"
 </script>
 
 <section class="page-container">

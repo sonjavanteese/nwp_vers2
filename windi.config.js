@@ -4,6 +4,7 @@ import plugin from 'windicss/plugin'
 
 export default defineConfig({
   darkMode: 'class', // or 'media'
+  safelist: 'p-1 p-2 p-3 p-4',
   theme: {
     extend: {
       screens: {
