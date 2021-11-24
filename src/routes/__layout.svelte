@@ -10,7 +10,7 @@
 
 
 <header class="bg-blue-500 text-white shadow">
-  <nav class="flex justify-between items-center container mx-auto py-2 px-4">
+  <nav class="flex justify-between items-center container mx-auto py-3 px-4">
     <a href="/" class="text-2xl"><Icon name="home" /></a>
     <span class="text-3xl font-semibold">nwp-app</span>
     <a href="/icons" class="text-2xl"><Icon name="cog" /></a>

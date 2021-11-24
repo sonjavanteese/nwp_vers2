@@ -7,11 +7,15 @@
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
-    "@sveltejs/kit": "next",
     "@sveltejs/adapter-vercel": "next",
+    "@sveltejs/kit": "next",
     "svelte": "^3.42.6",
     "svelte-windicss-preprocess": "^4.1.7",
     "windicss": "^3.2.1"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.28.1",
+    "daisyui": "^1.16.2"
+  }
 }
